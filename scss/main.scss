@@ -1,0 +1,140 @@
+@import "config";
+@import "menu";
+@import "featured";
+@import "advices";
+@import "about";
+@import "squat";
+@import "contact";
+@import "map";
+@import "footer";
+@import "responsive";
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+
+  @supports (background-blend-mode: multiply) {
+    background-image: url("../img/darius2.jpg"), radial-gradient(#444, #222);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 55vh;
+}
+
+h1 {
+  font-size: clamp(1rem, calc(5vw + 1rem), 4.5rem);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.logo p {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.hero {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.primary-title {
+  line-height: 1;
+  font-weight: 300;
+  font-size: clamp(1rem, calc(5vw + 1rem), 4rem);
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: $primary-color;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.item-title {
+  font-size: 1.75rem;
+  margin: 0.25em 0;
+  text-align: center;
+}
+
+/* FONT AWESOME ICONS */
+
+.fas,
+.far {
+  color: $tertiary-color;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#scrollUp {
+  position: fixed;
+  bottom: 1em;
+  right: 0.5em;
+  cursor: pointer;
+  border: none;
+  background-color: $primary-color;
+  outline: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.3em;
+}
+
+#scrollUp .fas {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.cookie-consent {
+  position: fixed;
+  transform: translateY(-100%);
+  left: 0;
+  right: 0;
+  background-color: orange;
+  transition: 0.9s ease-in;
+
+  &.active {
+    transform: translateY(0);
+    bottom: 0;
+  }
+}
+
+.cookie-consent .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cookie-btn {
+  background-color: $secondary-color;
+  border: 0;
+  border-radius: 0.3em;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5em 1.25em;
+  cursor: pointer;
+}
+
+.cookie-text {
+  font-size: 1.1rem;
+}

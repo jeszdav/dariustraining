@@ -1,0 +1,31 @@
+.contact {
+  padding-bottom: 2em;
+}
+
+.split-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-header {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.split-contact a,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}

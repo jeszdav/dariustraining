@@ -1,0 +1,94 @@
+/* HAMBURGER */
+
+.menu-btn {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  @include transition-ease;
+
+  &__burger {
+    display: flex;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    @include transition-ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 3px;
+      background-color: white;
+      @include transition-ease;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+    &::after {
+      transform: translateY(10px);
+    }
+  }
+}
+
+/* ANIMATION */
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-28px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(20px, -20px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(20px, 20px);
+}
+
+/* NAVIGATION */
+
+nav {
+  visibility: hidden;
+  padding-top: 1em;
+  min-height: 10em;
+
+  &.open {
+    visibility: visible;
+  }
+
+  .menu-nav {
+    width: 100vw;
+    transform: translateX(-100%);
+    @include transition-ease;
+
+    &.open {
+      transform: translateY(0);
+    }
+
+    &__item {
+      text-transform: uppercase;
+    }
+  }
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+nav ul > * + * {
+  padding-top: 0.8em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}

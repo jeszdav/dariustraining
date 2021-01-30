@@ -1,0 +1,17 @@
+.featured {
+  min-height: 100vh;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
